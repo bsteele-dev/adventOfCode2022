@@ -2536,9 +2536,8 @@ $outcomeScoreMap = [
 
 $totalScore = 0;
 $counter = 0;
-//$oppMove = '';
-//$myMove = '';
-//$outcome = '';
+$oppMove = '';
+$myMove = '';
 foreach ($inputMovesArray as $index => $move) {
 	$counter++;
 	if ($counter === 4) {
