@@ -1,9 +1,12 @@
 <?php
 $puzzleInput = file_get_contents('./input/day2.txt');
 
-$testInput = 'A Y
-B X
-C Z';
+$testInput =
+	<<< YEET
+	A Y
+	B X
+	C Z
+	YEET;
 $testScore = 15;
 
 /**
