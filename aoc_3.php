@@ -45,17 +45,14 @@ if ($inputFile) {
 		$rightCompartment = str_split($compartmentItems[1]);
 
 		// Find the common items in both lists.
-		// This creates an array with random keys,
-		// array_values is used to reset keys so we can grab zeroith item
+		// and increment sum by referencing value map
 		$commonItems = array_intersect($leftCompartment, $rightCompartment);
-		// reference value map to increment our sum
-		$prioritySum += $priorityValueMap[array_values($commonItems)[0]];
+		$prioritySum += $priorityValueMap[reset($commonItems)];
 	}
-	fclose($inputFile);
+fclose($inputFile);
 
-	print "$prioritySum\n";
+print "$prioritySum\n";
 }
-
 
 /**
  * Prepares map of values to determine total score of priority items
@@ -81,6 +78,3 @@ function prepareValueMap(): array
 	// Flip our array so letters become the keys
 	return array_flip($valueMap);
 }
-
-
-

@@ -15,8 +15,6 @@ $testScore = 15;
  * plus the score for the outcome of the round (0 if you lost, 3 if the round was a draw, and 6 if you won).
  */
 
-
-
 $inputMovesArray = str_split($puzzleInput);
 
 $moveNameMap = [
