@@ -1,4 +1,5 @@
 <?php
+// TODO: part 2
 /**
  * Each rucksack has two large compartments.
  * All items of a given type are meant to go into exactly one of the two compartments.
