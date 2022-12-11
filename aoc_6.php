@@ -51,7 +51,7 @@ function process($stream, int $packetLength)
 
 
 print "Answer 1: " . process($stream, 4) . "\n";
-//print "Answer 1: " . process($stream, 14) . "\n";
+//print "Answer 2: " . process($stream, 14) . "\n";
 
 
 
