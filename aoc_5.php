@@ -28,7 +28,6 @@
 // Load file
 $file = file_get_contents('./input/day5.txt');
 $chunkedInput = explode("\n", $file);
-debug($chunkedInput);
 
 // Parse input
 $stackComplete = false;
@@ -38,6 +37,7 @@ foreach ($chunkedInput as $lineNumber => $value) {
 	// The values on this row represent each section
 	// we need each section to be its own array
 	if (!$stackComplete && strpos(ltrim($value), 1) === 0) {
+		$stackComplete = true;
 		$filteredArray = array_filter(str_split($value), 'removeBlanks');
 		// Stack names/positions are in values,
 		// flip to values to be keys of new array then nuke values
@@ -72,7 +72,6 @@ foreach ($chunkedInput as $lineNumber => $value) {
 				}
 			}
 		}
-		$stackComplete = true;
 	}
 
 	// now we are past the input
